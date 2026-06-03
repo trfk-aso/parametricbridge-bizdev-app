@@ -185,40 +185,7 @@ fun ServiceDetailsScreen(
                         }
 
                         // Availability slots
-                        if (!service.availableTime.isNullOrEmpty()) {
-                            Spacer(modifier = Modifier.height(20.dp))
-                            Text(
-                                text = "Available Times",
-                                fontFamily = HeadingFamily,
-                                fontWeight = FontWeight.SemiBold,
-                                fontSize = 16.sp,
-                                color = OnSurface,
-                            )
-                            Spacer(modifier = Modifier.height(10.dp))
-                            LazyRow(
-                                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                            ) {
-                                items(service.availableTime) { time ->
-                                    val timeStr = time.format(timeFormatter)
-                                    val isSelected = selectedTime == timeStr
-                                    Box(
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(20.dp))
-                                            .background(if (isSelected) Primary else ChipBackground)
-                                            .clickable { selectedTime = timeStr }
-                                            .padding(horizontal = 16.dp, vertical = 8.dp),
-                                    ) {
-                                        Text(
-                                            text = timeStr,
-                                            fontFamily = BodyFamily,
-                                            fontSize = 13.sp,
-                                            color = if (isSelected) Color.White else ChipContent,
-                                            fontWeight = FontWeight.Medium,
-                                        )
-                                    }
-                                }
-                            }
-                        }
+
                     }
                 }
 
