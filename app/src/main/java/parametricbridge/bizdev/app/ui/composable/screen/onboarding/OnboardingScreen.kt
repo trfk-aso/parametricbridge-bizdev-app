@@ -44,13 +44,13 @@ private val slides = listOf(
         icon = R.drawable.icon,
         title = "Expert-Led Solutions",
         description = "Our seasoned consultants bring decades of experience in organizational design, process optimization, and change management.",
-        imageUrl = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600"
+        imageUrl = "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fE1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D"
     ),
     OnboardingSlide(
         icon = R.drawable.icon,
         title = "Measurable Results",
         description = "We deliver concrete outcomes — improved efficiency, stronger teams, and sustainable competitive advantage for your business.",
-        imageUrl = "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600"
+        imageUrl = "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fE1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D"
     ),
 )
 
@@ -109,7 +109,7 @@ fun OnboardingScreen(
                     model = slide.imageUrl,
                     contentDescription = null,
                     modifier = Modifier
-                        .size(120.dp)
+                        .size(240.dp)
                         .clip(RoundedCornerShape(16.dp)),
                     contentScale = ContentScale.Crop,
                 )
@@ -139,7 +139,7 @@ fun OnboardingScreen(
         if (isLastPage) {
             Button(
                 onClick = {
-                    viewModel.setOnboardingCompleted()
+                    viewModel.setOnboarded()
                     onNavigateToHomeScreen()
                 },
                 modifier = Modifier

@@ -41,16 +41,7 @@ fun BookingsScreen(
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
-                    item {
-                        Text(
-                            text = "My Bookings",
-                            fontFamily = HeadingFamily,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 22.sp,
-                            color = OnSurface,
-                            modifier = Modifier.padding(bottom = 4.dp),
-                        )
-                    }
+
                     items(state.data) { booking ->
                         BookingCard(
                             booking = booking,

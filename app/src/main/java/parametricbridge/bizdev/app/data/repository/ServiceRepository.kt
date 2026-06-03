@@ -47,7 +47,7 @@ class ServiceRepository {
             description = "In-depth review of existing management processes to identify inefficiencies, redundancies, and opportunities for streamlining across business operations.",
             price = 1800.0,
             availableTime = listOf(LocalTime.of(9, 0), LocalTime.of(13, 0)),
-            imageUrl = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800",
+            imageUrl = "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fE1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
             category = "Performance & Efficiency",
             durationMinutes = 120,
             features = listOf(
@@ -81,7 +81,7 @@ class ServiceRepository {
             description = "End-to-end transformation planning service covering digital adoption, process modernization, and cultural change management for sustainable growth.",
             price = 4500.0,
             availableTime = listOf(LocalTime.of(10, 0), LocalTime.of(15, 0)),
-            imageUrl = "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+            imageUrl = "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fE1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
             category = "Strategic Planning",
             durationMinutes = 300,
             features = listOf(
@@ -98,7 +98,7 @@ class ServiceRepository {
             description = "Detailed operational assessment identifying waste, cost reduction opportunities, and performance improvements across your core business functions.",
             price = 2200.0,
             availableTime = listOf(LocalTime.of(9, 0), LocalTime.of(11, 0), LocalTime.of(14, 0)),
-            imageUrl = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+            imageUrl = "https://plus.unsplash.com/premium_photo-1661767467261-4a4bed92a507?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjV8fE1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
             category = "Performance & Efficiency",
             durationMinutes = 180,
             features = listOf(
@@ -132,7 +132,7 @@ class ServiceRepository {
             description = "Structured change management engagement to guide your organization through major transitions with minimal disruption and maximum employee buy-in.",
             price = 3600.0,
             availableTime = listOf(LocalTime.of(9, 0), LocalTime.of(14, 0)),
-            imageUrl = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
+            imageUrl = "https://images.unsplash.com/photo-1590402494693-bd0499aefe00?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fE1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
             category = "Organizational Development",
             durationMinutes = 240,
             features = listOf(
@@ -166,7 +166,7 @@ class ServiceRepository {
             description = "One-on-one executive coaching focused on leadership effectiveness, strategic thinking, communication, and navigating complex organizational challenges.",
             price = 800.0,
             availableTime = listOf(LocalTime.of(8, 0), LocalTime.of(12, 0), LocalTime.of(17, 0)),
-            imageUrl = "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800",
+            imageUrl = "https://images.unsplash.com/photo-1560264418-c4445382edbc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAxfHxNYW5hZ2VtZW50fGVufDB8fDB8fHww",
             category = "Leadership & Coaching",
             durationMinutes = 90,
             features = listOf(
@@ -200,7 +200,7 @@ class ServiceRepository {
             description = "Comprehensive evaluation of organizational culture, values alignment, and employee engagement to build a high-performance workplace culture.",
             price = 2100.0,
             availableTime = listOf(LocalTime.of(9, 0), LocalTime.of(15, 0)),
-            imageUrl = "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800",
+            imageUrl = "https://images.unsplash.com/photo-1630672790237-38eeb57cb60b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA5fHxNYW5hZ2VtZW50fGVufDB8fDB8fHww",
             category = "Organizational Development",
             durationMinutes = 150,
             features = listOf(

@@ -35,13 +35,7 @@ fun SettingsScreen() {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Text(
-            text = "Settings",
-            fontFamily = HeadingFamily,
-            fontWeight = FontWeight.Bold,
-            fontSize = 24.sp,
-            color = OnSurface,
-        )
+
 
         // About section
         SectionCard(title = "About") {
@@ -76,42 +70,7 @@ fun SettingsScreen() {
                     context.startActivity(intent)
                 }
             )
-            Divider(color = Border, thickness = 0.5.dp)
-            SettingsRow(
-                icon = Icons.Default.Email,
-                label = "Email Support",
-                value = "info@parametric-solutions.digital",
-                isClickable = true,
-                onClick = {
-                    val intent = Intent(Intent.ACTION_SENDTO).apply {
-                        data = Uri.parse("mailto:info@parametric-solutions.digital")
-                    }
-                    context.startActivity(intent)
-                }
-            )
-        }
 
-        // Legal section
-        SectionCard(title = "Legal") {
-            SettingsRow(
-                icon = Icons.Default.Policy,
-                label = "Privacy Policy",
-                isClickable = true,
-                onClick = {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://parametric-solutions.digital/privacy"))
-                    context.startActivity(intent)
-                }
-            )
-            Divider(color = Border, thickness = 0.5.dp)
-            SettingsRow(
-                icon = Icons.Default.Gavel,
-                label = "Terms of Service",
-                isClickable = true,
-                onClick = {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://parametric-solutions.digital/terms"))
-                    context.startActivity(intent)
-                }
-            )
         }
     }
 }

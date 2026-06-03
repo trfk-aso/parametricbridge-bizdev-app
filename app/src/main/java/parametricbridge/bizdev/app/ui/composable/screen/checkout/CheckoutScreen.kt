@@ -37,7 +37,6 @@ fun CheckoutScreen(
     val emailInvalid by viewModel.emailInvalidState.collectAsState()
     val service = remember(serviceId) { serviceRepository.getById(serviceId) }
 
-    var phone by remember { mutableStateOf("") }
     var notes by remember { mutableStateOf("") }
     var selectedDate by remember { mutableStateOf("") }
     var showDatePicker by remember { mutableStateOf(false) }
@@ -191,14 +190,7 @@ fun CheckoutScreen(
             singleLine = true,
         )
 
-        OutlinedTextField(
-            value = phone,
-            onValueChange = { phone = it },
-            label = { Text("Phone Number", fontFamily = BodyFamily) },
-            modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(12.dp),
-            singleLine = true,
-        )
+
 
         OutlinedTextField(
             value = viewModel.customerEmail,

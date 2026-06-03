@@ -84,37 +84,42 @@ fun HomeScreen(
     ) {
         // Next available banner
         item {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp)
-                    .clip(RoundedCornerShape(16.dp))
-                    .background(Brush.horizontalGradient(listOf(GradientStart, GradientEnd)))
-                    .padding(20.dp)
-            ) {
-                Column {
-                    Text(
-                        text = "Next Available Slot",
-                        fontFamily = BodyFamily,
-                        fontSize = 12.sp,
-                        color = Color.White.copy(alpha = 0.8f),
-                        fontWeight = FontWeight.Medium,
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = "Today at 2:00 PM",
-                        fontFamily = HeadingFamily,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = Color.White,
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = "Strategic Planning Session · From \$800",
-                        fontFamily = BodyFamily,
-                        fontSize = 13.sp,
-                        color = Color.White.copy(alpha = 0.85f),
-                    )
+            val nextAvailableService = allServices.firstOrNull()
+
+            if (nextAvailableService != null) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)
+                        .clip(RoundedCornerShape(16.dp))
+                        .background(Brush.horizontalGradient(listOf(GradientStart, GradientEnd)))
+                        .clickable { onNavigateToServiceDetails(nextAvailableService.id) }
+                        .padding(20.dp)
+                ) {
+                    Column {
+                        Text(
+                            text = "Next Available Slot",
+                            fontFamily = BodyFamily,
+                            fontSize = 12.sp,
+                            color = Color.White.copy(alpha = 0.8f),
+                            fontWeight = FontWeight.Medium,
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "Today at 2:00 PM",
+                            fontFamily = HeadingFamily,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 20.sp,
+                            color = Color.White,
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "${nextAvailableService.name} · From $${nextAvailableService.price.toInt()}",
+                            fontFamily = BodyFamily,
+                            fontSize = 13.sp,
+                            color = Color.White.copy(alpha = 0.85f),
+                        )
+                    }
                 }
             }
         }
@@ -177,11 +182,10 @@ fun HomeScreen(
                 }
                 // Dot indicators
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 8.dp, bottom = 4.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     repeat(featuredServices.size) { index ->
                         Box(

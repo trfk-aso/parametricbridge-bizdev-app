@@ -31,7 +31,7 @@ fun SplashScreen(
     onNavigateToOnboarding: () -> Unit,
     viewModel: KBPMHSplashVM = koinViewModel(),
 ) {
-    val onboardingComplete by viewModel.isOnboardingCompleted.collectAsState()
+    val onboardingComplete by viewModel.onboardedState.collectAsState()
     val scale = remember { Animatable(0.8f) }
     val alpha = remember { Animatable(0f) }
 

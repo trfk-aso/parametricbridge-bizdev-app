@@ -62,23 +62,23 @@ private fun getTitle(currentDestination: NavDestination?): Int? {
         currentDestination == null -> null
 
         currentDestination.hierarchy.any { it.hasRoute(NavRoute.Home::class) } -> {
-            R.string.top_bar_home_title
+            (R.string.parametric_bridge)
         }
 
         currentDestination.hierarchy.any { it.hasRoute(NavRoute.ServiceDetails::class) } -> {
-            R.string.top_bar_service_details_title
+            (R.string.details)
         }
 
         currentDestination.hierarchy.any { it.hasRoute(NavRoute.Checkout::class) } -> {
-            R.string.top_bar_checkout_title
+            (R.string.checkout)
         }
 
         currentDestination.hierarchy.any { it.hasRoute(NavRoute.Bookings::class) } -> {
-            R.string.top_bar_bookings_title
+            R.string.bottom_bar_nav_item_bookings_title
         }
 
         currentDestination.hierarchy.any { it.hasRoute(NavRoute.Settings::class) } -> {
-            R.string.top_bar_settings_title
+            R.string.bottom_bar_nav_item_settings_title
         }
 
         else -> null

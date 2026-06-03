@@ -3,4 +3,7 @@
     <string name="bottom_bar_nav_item_home_title">Services</string>
     <string name="bottom_bar_nav_item_bookings_title">Bookings</string>
     <string name="bottom_bar_nav_item_settings_title">Settings</string>
+    <string name="parametric_bridge">Parametric Bridge</string>
+    <string name="details">Details</string>
+    <string name="checkout">Checkout</string>
 </resources>
